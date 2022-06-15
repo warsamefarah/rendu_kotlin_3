@@ -11,21 +11,24 @@
         android:layout_height="match_parent"
         android:background="@color/black">
 
-        <EditText
-            android:id="@+id/editText"
+        <TextView
+            android:id="@+id/textInput"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="260dp"
             android:textColor="@color/white"
+            android:gravity="end"
+            android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TableLayout
+            android:id="@+id/table"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="350dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/editText">
+            android:layout_below="@id/textInput">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -162,27 +165,32 @@
 
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2">
-
-                <Button
-                    android:id="@+id/buttonclear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:onClick="onClear"
-                    android:text="C" />
-
-                <Button
-                    android:id="@+id/buttonresult"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:onClick="onEqual"
-                    android:text="=" />
-
-            </TableRow>
         </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="117dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/table"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/buttonclear"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:onClick="onClear"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/buttonresult"
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:onClick="onEqual"
+                android:text="=" />
+        </LinearLayout>
 
     </RelativeLayout>
 
